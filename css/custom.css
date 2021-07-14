@@ -1,0 +1,93 @@
+body, html {
+    height: 100%;
+    padding: 0;
+}
+
+.parallax { 
+    /* The image used */
+    /*background-image: url("../img/linux.jpg");*/
+    background-color: black;
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* The animation code */
+@keyframes term {
+    from {background-color: black;}
+    to {background-color: #00ff00;}
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+    body #title h1 {
+        font-size: 75px;
+    }
+
+    #sub-title {
+        font-size: 35px;
+    }
+
+    body #title .terminal {
+        font-size: 25px;
+    }
+
+    #title .blinker {
+        width:20px;
+        height:20px;
+    }
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+    body #title h1 {
+        font-size: 100px;
+    }
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}
+
+#aboutme {
+    height: 100%;
+}
+
+#title {
+    color: white;
+}
+
+#title h1 {
+    font-size: 45px;
+}
+
+#title .terminal {
+    font-family: 'Cutive Mono', monospace;
+    font-size: 15px;
+    position: absolute;
+    bottom: 0;
+    color: #00ff00;
+}
+
+#title .blinker {
+    width:10px;
+    height:10px;
+    background-color: black;
+    animation-name: term;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
